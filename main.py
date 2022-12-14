@@ -1,6 +1,5 @@
 # importing required Libraries
 import pandas as pd
-from streamlit_pandas_profiling import st_profile_report
 import streamlit as st
 import os
 
@@ -8,7 +7,7 @@ import os
 with st.sidebar:
     st.image('image.png')
     st.title("AutoML App")
-    choice = st.radio("Menu", ['Upload Data', 'Data Profile', 'ML Model Training', 'Download Model'])
+    choice = st.radio("Menu", ['Upload Data', 'ML Model Training', 'Download Model'])
     st.info("This application builds machine learning model automatically using pycaret, pandas profiling and streamlit")
 
 # Reading file if saved locally
@@ -24,11 +23,6 @@ if choice == 'Upload Data':
         df.to_csv('file.csv', index=False)
         st.dataframe(df)
 
-# Using Pandas data profiling to see the Exploretory data analysis
-if choice == 'Data Profile':
-    st.title("Automated EDA")
-    data_profile = df.profile_report()
-    st_profile_report(data_profile)
 
 # Training model according to users choice
 if choice == 'ML Model Training':
