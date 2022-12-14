@@ -1,0 +1,6 @@
+This App can be used for automatic training of machine learning models.
+There are 2 categories :
+1. Regression
+2. Classification
+
+This App use Pycaret for the AutoML, and the trained model is obtained n "plk" format
