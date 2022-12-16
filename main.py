@@ -6,8 +6,8 @@ import os
 
 # Creating Menu bar
 with st.sidebar:
-    st.image('image.png')
-    st.title("AutoML App")
+    st.title("Menu")
+    st.image("Image.jpg")
     choice = st.radio("Menu", ['Upload Data', 'Data Profile', 'ML Model Training', 'Download Model'])
     st.info("This application builds machine learning model automatically using pycaret, pandas profiling and streamlit")
 
